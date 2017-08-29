@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="nl.tudelft.goallogparser.commands.ConfigHandler"
+            id="nl.TUDelft.GOAL-log-parser.open-config"
+            name="config">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=project">
+         <menu
+               id="fileMenu"
+               label="Log Parser">
+            <command
+                  commandId="nl.TUDelft.GOAL-log-parser.open-config"
+                  style="push"
+                  tooltip="Exits the application">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
